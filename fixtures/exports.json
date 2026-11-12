@@ -1,0 +1,40 @@
+{
+  "intent": {
+    "tenant": "north",
+    "filters": {
+      "from": "2026-10-01",
+      "until": "2026-11-01"
+    },
+    "deadline": 60
+  },
+  "ready_at": 5,
+  "parts": [
+    {
+      "name": "oct-a",
+      "rows": [
+        {
+          "id": "1",
+          "amount": "12.00"
+        }
+      ]
+    },
+    {
+      "name": "oct-b",
+      "rows": [
+        {
+          "amount": "20.00",
+          "id": "2"
+        }
+      ]
+    }
+  ],
+  "link_ttl": 3,
+  "timeline": [
+    "apply",
+    "restart-before-ready",
+    "first-download",
+    "expire-link",
+    "renew-link",
+    "last-part-versus-cancel"
+  ]
+}
