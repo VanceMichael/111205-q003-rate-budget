@@ -1,0 +1,38 @@
+{
+  "credential": "synthetic-shared",
+  "tenant": "north",
+  "endpoint": "items",
+  "responses": [
+    {
+      "at": 0,
+      "status": 429,
+      "retry_after": 5
+    },
+    {
+      "at": 5,
+      "status": 200,
+      "records": [
+        {
+          "id": "row-1"
+        }
+      ]
+    }
+  ],
+  "limits": {
+    "credential_per_second": 2,
+    "tenant_daily": 3,
+    "endpoint_concurrency": 1
+  },
+  "jobs": [
+    {
+      "id": "job-1",
+      "tenant": "north",
+      "priority": 9
+    },
+    {
+      "id": "job-2",
+      "tenant": "south",
+      "priority": 1
+    }
+  ]
+}
